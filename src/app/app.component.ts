@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  agreed: boolean;
+  agreedClock: boolean;
+
+  onEdit(agreed: boolean) {
+    this.agreed = agreed;
+  }
+  
+  onClock(agreedClock: boolean) {
+    this.agreedClock = agreedClock;
+  }
 }

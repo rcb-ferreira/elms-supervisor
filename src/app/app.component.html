@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<app-header class="header"
+  (onEdit)="onEdit($event)"></app-header>
+
+<div class="content">
+  <app-search (update)="term = $event"></app-search>
+  <app-clock-super [agreed]="agreed" [term]="term"></app-clock-super>
+</div>
+
+<app-footer *ngIf="agreed" class="footer"></app-footer>
+
+

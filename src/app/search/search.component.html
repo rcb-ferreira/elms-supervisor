@@ -1,0 +1,7 @@
+<form class="quick-search-form" novalidate>
+  <md-input-container class="quick-search-full-width">
+    <input name="searchUser" mdInput placeholder="Search" [(ngModel)]="searchUser" (keyup)="onKey(searchUser)">
+    <md-icon class="quick-search-icon" mdPrefix>search</md-icon>
+    <md-icon *ngIf="searchUser.length > 1" (click)="searchUser = ''" class="quick-search-icon clear" mdSuffix>close</md-icon>
+  </md-input-container>
+</form>

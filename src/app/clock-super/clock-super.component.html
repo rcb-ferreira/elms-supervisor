@@ -1,0 +1,9 @@
+<md-card *ngFor="let user of users; let i = index" [class.clock-selected]="user.selected" >
+  <md-radio-group *ngIf="!toggleClock" class="card-clock">
+    <md-radio-button [class.mat-radio-checked]="user.selected" value="{{i}}" (click)="onSelect(i)"></md-radio-button>
+  </md-radio-group>
+  <md-card-header>
+    <md-card-title>{{user.name}}</md-card-title>
+    <md-card-subtitle>{{user.time}}</md-card-subtitle>
+  </md-card-header>
+</md-card>
