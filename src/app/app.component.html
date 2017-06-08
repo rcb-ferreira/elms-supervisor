@@ -2,8 +2,12 @@
   (onEdit)="onEdit($event)"></app-header>
 
 <div class="content">
-  <app-search (update)="search($event)"></app-search>
-  <app-clock-super [agreed]="agreed" [term]="term"></app-clock-super>
+  <app-search 
+    (update)="search($event)"></app-search>
+
+  <app-clock-super 
+    [agreed]="agreed"
+    [term]="term"></app-clock-super>
 </div>
 
 <app-footer *ngIf="agreed" class="footer"></app-footer>

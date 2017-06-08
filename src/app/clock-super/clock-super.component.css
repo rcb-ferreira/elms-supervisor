@@ -7,9 +7,7 @@
 }
 
 .card-clock {
-    position: absolute;
-    right: 25px;
-    top: 2em;
+    float: right;
 }
 
 .clock-in {
@@ -19,8 +17,9 @@
 
 .clock-selected {
     background: #f0f8ff;
-    border-left: 1em solid #008000;
-    padding-left: 8px;
+    border-left: 5px solid #008000;
+    padding-left: .5em;
+    border-radius: 0;
 }
 
 .mat-card-subtitle {
