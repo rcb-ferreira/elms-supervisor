@@ -10,10 +10,12 @@ export class ClockSuperComponent implements OnInit {
   @Input() term: string;
 
   toggleClock: boolean = false;
-  users: Array<object>;
+  users: Array<any>;
   selected: any;
+  searchName: string = '';
   
-  constructor() { 
+  constructor() {
+    
       this.users = [
         {
           name: 'Rui Ferreira',
@@ -63,13 +65,19 @@ export class ClockSuperComponent implements OnInit {
     
   }
 
-  ngOnChanges(changes) {
-    // console.log(changes);
 
-    if (changes.agreed) {
+	ngOnChanges(changes: {[ propName: string]: SimpleChange}) {
+
+    if ((changes['term'] !== undefined) && changes['term'].currentValue) {
+      this.searchName = changes['term'].currentValue
+    } else {
+      this.searchName = ''
+    }
+
+    if (changes['agreed']) {
       this.toggleClock = !this.toggleClock;
     }
-  }
+	}
 
   onSelect(key): void {
 

@@ -17,10 +17,7 @@ export class SearchComponent implements OnInit {
     this.update.emit('');
   }
 
-  onKey(str: string) {
-    console.log(str);
-    
+  onKey(str: string) {    
     this.update.emit(str);
-    // return this.items.filter(item => item.indexOf(str) > -1);
   }
 }
