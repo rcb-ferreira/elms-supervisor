@@ -2,7 +2,7 @@
   (onEdit)="onEdit($event)"></app-header>
 
 <div class="content">
-  <app-search (update)="term = $event"></app-search>
+  <app-search (update)="search($event)"></app-search>
   <app-clock-super [agreed]="agreed" [term]="term"></app-clock-super>
 </div>
 
