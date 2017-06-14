@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChange, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-clock-super',
@@ -11,60 +11,88 @@ export class ClockSuperComponent implements OnInit {
 
   toggleClock: boolean = false;
   users: Array<any>;
+  tiles: Array<any>;
   selected: any;
+  clockColms: number;
+  clockGutter: number;
   searchName: string = '';
-  
+
+
   constructor() {
-    
       this.users = [
         {
           name: 'Rui Ferreira',
-          time: new Date('1/1/16'),
+          time:'Adcorp',
         },
         {
           name: 'Glenn',
-          time: new Date('1/17/16'),
+          time: 'Adcorp',
         },
         {
-          name: 'Noris',
-          time: new Date('1/28/16'),
+          name: 'Norris',
+          time: 'Adcorp',
         },
             {
           name: 'Rui Ferreira',
-          time: new Date('1/1/16'),
+          time:'Adcorp',
         },
         {
           name: 'Glenn',
-          time: new Date('1/17/16'),
+          time: 'Adcorp',
         },
         {
-          name: 'Noris',
-          time: new Date('1/28/16'),
+          name: 'Norris',
+          time: 'Adcorp',
         },
             {
           name: 'Rui Ferreira',
-          time: new Date('1/1/16'),
+          time:'Adcorp',
         },
         {
           name: 'Glenn',
-          time: new Date('1/17/16'),
+          time: 'Adcorp',
         },
         {
-          name: 'Noris',
-          time: new Date('1/28/16'),
+          name: 'Norris',
+          time: 'Adcorp',
         }
       ];
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.resize();
   }
 
   ngOnInit() {
 
     this.users.forEach((element, key) => {
-      
+
       this.users[key]['selected'] = false;
     });
-    
+
+    this.resize();
   }
 
+  resize() {
+
+    let winwidth = window.innerWidth;
+    console.log(winwidth);
+
+    if ( (winwidth >= 600) && (winwidth < 1024) ) {
+      this.clockColms = 2;
+      this.clockGutter = 10;
+    } else if ( (winwidth >= 1024) && (winwidth < 1440) ) {
+      this.clockColms = 3;
+      this.clockGutter = 10;
+    } else if ( (winwidth >= 1440) ) {
+      this.clockColms = 4;
+      this.clockGutter = 10;
+    } else {
+      this.clockColms = 1;
+      this.clockGutter = 1;
+    }
+  }
 
 	ngOnChanges(changes: {[ propName: string]: SimpleChange}) {
 

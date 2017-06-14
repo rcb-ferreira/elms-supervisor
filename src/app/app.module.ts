@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 import { MdToolbarModule,
         MdIconModule,
         MdListModule,
         MdCardModule,
         MdRadioModule,
-        MdInputModule } from '@angular/material';
+        MdInputModule,
+        MdGridListModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -19,6 +21,7 @@ import { ClockSuperComponent } from './clock-super/clock-super.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { SearchfilterPipe } from './searchfilter.pipe';
+import { TimesheetComponent } from './timesheet/timesheet.component';
 
 @NgModule({
   declarations: [
@@ -28,17 +31,21 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     FooterComponent,
     SearchComponent,
     SearchfilterPipe,
+    TimesheetComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     BrowserAnimationsModule,
     MdToolbarModule,
     MdIconModule,
+    MdListModule,
     MdCardModule,
     MdRadioModule,
-    MdInputModule
+    MdInputModule,
+    MdGridListModule
   ],
   providers: [GeneralService],
   bootstrap: [AppComponent]

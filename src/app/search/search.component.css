@@ -3,13 +3,12 @@
 }
 
 .clear {
-    margin-right: 2em;
+    margin-right: 1.2em;
     cursor: pointer;
 }
 
 .quick-search-full-width {
     width: 100%;
     display: block;
-    margin-bottom: -1em;
     padding:1em 0 0 0;
 }
