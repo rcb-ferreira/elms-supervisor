@@ -1,5 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+html { height: 100%; }
 body {
+    height:100%;
+    min-height: 100%;
+    background: #FFF;
+    position:relative;
     margin: 0;
 }
 
@@ -10,3 +14,75 @@ a {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.content {
+    margin: 56px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:100%;
+}
+
+.mat-sidenav-container {
+    height: 100%;
+}
+
+.mat-sidenav {
+    width: 200px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+/* Grid style */
+.grid-list-wrapper {
+  padding: 1em;
+}
+
+.mat-card {
+  width: 100%;
+  max-height: 55px;
+}
+
+.mat-grid-tile {
+  border: 1px solid #CCC;
+}
+
+.mat-card-selected {
+  border-left: 5px solid #008000 !important;
+  padding-left: 19px !important;
+  background: #f0f8ff;
+}
+
+.mat-grid-list {
+  margin: 1em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 599px) { 
+  .mat-grid-list {
+    margin: 0;
+  }
+
+  .mat-grid-tile {
+    border: none;
+    border-bottom: 1px solid #CCC;
+  }
+
+  .mat-card-selected {
+    padding-left: 11px !important;
+  }
+}
+/* //Grid style */

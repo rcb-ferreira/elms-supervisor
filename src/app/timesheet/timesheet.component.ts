@@ -12,4 +12,9 @@ export class TimesheetComponent implements OnInit {
   ngOnInit() {
   }
 
+  term: string;
+
+  search(term: string) {
+    this.term = term;
+  }
 }

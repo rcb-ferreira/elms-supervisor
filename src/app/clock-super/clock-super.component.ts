@@ -77,7 +77,6 @@ export class ClockSuperComponent implements OnInit {
   resize() {
 
     let winwidth = window.innerWidth;
-    console.log(winwidth);
 
     if ( (winwidth >= 600) && (winwidth < 1024) ) {
       this.clockColms = 2;

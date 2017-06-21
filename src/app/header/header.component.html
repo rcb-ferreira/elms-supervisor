@@ -1,4 +1,5 @@
 <md-toolbar color="primary">
+    <md-icon class="toolbar-icon" (click)="toggleMenu.emit()">menu</md-icon>
     <span>Workforce</span>
     <span class="example-spacer"></span>
     <a class="example-icon" (click)="edit(!canEdit)">{{!canEdit ? 'Clock' : 'Done'}}</a>

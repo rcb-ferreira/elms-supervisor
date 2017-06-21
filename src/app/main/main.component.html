@@ -1,0 +1,16 @@
+<app-header class="header"
+  (onEdit)="onEdit($event)"
+  (toggleMenu)="focusSidenav.toggle()"></app-header>
+
+<div class="content">
+  <md-sidenav-container>
+    <md-sidenav #focusSidenav>
+      <md-nav-list>
+        <a md-list-item routerLink="/timesheet" (click)="focusSidenav.toggle()" routerLinkActive="active">Timesheet</a>
+        <a md-list-item routerLink="/workforce" (click)="focusSidenav.toggle()" routerLinkActive="active">Workforce</a>
+      </md-nav-list>
+    </md-sidenav>
+       
+    <router-outlet></router-outlet>
+  </md-sidenav-container>
+</div>

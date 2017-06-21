@@ -1,3 +1,5 @@
-<p>
-  timesheet works!
-</p>
+<app-search 
+    (update)="search($event)"></app-search>
+
+<app-timesheet-view 
+  [term]="term"></app-timesheet-view>
