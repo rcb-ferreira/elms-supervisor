@@ -16,7 +16,8 @@ import { MdToolbarModule,
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { GeneralService } from './services/general.service';
+import { ApiService } from './services/api.service';
+import { CountriesService } from './services/countries.service';
 
 import { MyRoutesRoutingModule }     from './my-routes/my-routes-routing.module'
 
@@ -64,7 +65,7 @@ import { TimesheetViewComponent } from './timesheet-view/timesheet-view.componen
     MdNativeDateModule,
     MyRoutesRoutingModule
   ],
-  providers: [GeneralService],
+  providers: [ApiService, CountriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
